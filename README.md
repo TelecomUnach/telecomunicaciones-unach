@@ -48,3 +48,7 @@ Es un sitio estático, sin inicio de sesión, base de datos ni panel administrat
 - Se añadieron datos generales, misión, visión y perfil de egreso sintetizados de https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/ (consultado el 15-10-2026).
 - La lista de docentes, publicaciones y proyectos continúa siendo demostrativa: editar `data.js` antes de publicación oficial.
 - Para GitHub Pages, subir el **contenido** de esta carpeta a la raíz del repositorio (no la carpeta contenedora).
+
+
+## Versión V4 — perfiles de docentes
+Se incorporaron 20 perfiles con formación y correo institucional desde hojas de vida facilitadas por el usuario. No se publicaron cédulas, direcciones, fechas de nacimiento, teléfonos ni correos personales. Las publicaciones y enlaces ORCID/Scholar quedan vacíos hasta verificar atribución. Para publicar, sustituir los archivos de la raíz del repositorio de GitHub.
