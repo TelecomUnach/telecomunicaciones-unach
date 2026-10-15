@@ -52,3 +52,7 @@ Es un sitio estático, sin inicio de sesión, base de datos ni panel administrat
 
 ## Versión V4 — perfiles de docentes
 Se incorporaron 20 perfiles con formación y correo institucional desde hojas de vida facilitadas por el usuario. No se publicaron cédulas, direcciones, fechas de nacimiento, teléfonos ni correos personales. Las publicaciones y enlaces ORCID/Scholar quedan vacíos hasta verificar atribución. Para publicar, sustituir los archivos de la raíz del repositorio de GitHub.
+
+
+## Versión 5 — Perfil de Carlos Ramiro Peñafiel-Ojeda
+Se añadió su fotografía en `assets/carlos-penafiel.jpg`, biografía en inglés proporcionada por la Dirección de Carrera, formación académica, intereses de investigación y enlaces ORCID y Google Scholar. Para actualizar GitHub Pages, sube todos los archivos y la carpeta `assets` conservando la estructura. La biografía es texto proporcionado por el usuario, sin verificación externa adicional.
