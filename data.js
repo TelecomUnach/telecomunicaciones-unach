@@ -104,7 +104,7 @@ window.PORTAL_DATA = {
       "id": "docente-08",
       "name": "Carlos Ramiro Peñafiel-Ojeda",
       "role": "Director de Carrera · Ingeniería en Telecomunicaciones",
-      "area": "Telecomunicaciones",
+      "area": "Radiocomunicaciones",
       "initials": "CR",
       "bio": "Carlos Ramiro Peñafiel-Ojeda is a Full Associate Professor (Microwaves, Antennas and Propagation) at the Universidad Nacional de Chimborazo. He received a bachelor's Degree in Electronics and Telecommunications engineering from the Universidad Nacional de Chimborazo. He received a bachelor's degree in Electronic Engineering in 2011 and a Master's Degree in Telecommunication Engineering at the University of Calabria in 2014, with the scholarship offered by the same University. In addition, he received his Ph.D. in Telecommunications Engineering at the Universitat Politècnica de Valencia in 2021 (cum laude and international mention) with a Universidad Nacional de Chimborazo scholarship to postgrad studies.\n\nHis research experience began in 2013, when he participated in the “Messageri della Conoscenza” Project, on the subject of sensor networks to control drones, managing to win a research scholarship at the Université de Technologie de Compiègne, Compiegne, France. In 2016, he collaborated with the Netllar Spanish company, developing microwave networks for beamforming. In 2017, he collaborated with the company Huawei (Finland) to design MIMO antennas that can be integrated into mobile devices. In 2018, he participated as a researcher in the Antennas and Electromagnetic Group of Queen Mary University of London in the design of metasurfaces. In addition, he has worked on several national and international research projects.\n\nIn 2014, he was a full professor at UPS-Quito (Universidad Politécnica Salesiana), and in 2015, he joined UNACH (Universidad Nacional de Chimborazo) as a full professor. He was head of the Telecommunication Engineering School at UNACH in 2015 and has held the same position since February. He also teaches in several master's programs. Currently, he is an IEEE chapter chair on the Antennas and Propagation Society in the Ecuador Section. His research interests include wearable antennas, metasurfaces, devices for satellite communications, MIMO antennas, antennas for IoT applications, and 5G and 6G technology.",
       "interests": [
@@ -115,7 +115,7 @@ window.PORTAL_DATA = {
         "IoT",
         "5G / 6G"
       ],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; Máster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; Ingeniero en Electrónica y Telecomunicaciones — UNACH; Laurea in Ingegneria Elettronica — Università della Calabria",
+      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; \n\nMáster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; \n\nIngeniero en Electrónica y Telecomunicaciones — UNACH; \n\nLaurea in Ingegneria Elettronica — Università della Calabria",
       "email": "carlospenafiel@unach.edu.ec",
       "orcid": "https://orcid.org/0000-0003-0362-3628",
       "scholar": "https://scholar.google.com/citations?user=n3_SsRYAAAAJ&hl=es&oi=ao",
