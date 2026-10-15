@@ -115,7 +115,7 @@ window.PORTAL_DATA = {
         "IoT",
         "5G / 6G"
       ],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; \n\nMáster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; \n\nIngeniero en Electrónica y Telecomunicaciones — UNACH; \n\nLaurea in Ingegneria Elettronica — Università della Calabria",
+      "education": "Doctorado en Telecomunicación (Cum Laude) Universitat Politècnica de València\n\nMáster Universitario en Ingeniería de Telecomunicaciones en la Università della Calabria\n\nIngeniero en Electrónica y Telecomunicaciones en la UNACH\n\nLaurea in Ingegneria Elettronica por la Università della Calabria",
       "email": "carlospenafiel@unach.edu.ec",
       "orcid": "https://orcid.org/0000-0003-0362-3628",
       "scholar": "https://scholar.google.com/citations?user=n3_SsRYAAAAJ&hl=es&oi=ao",
