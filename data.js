@@ -108,7 +108,7 @@ window.PORTAL_DATA = {
       "initials": "CR",
       "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
       "interests": [],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; Máster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; Ingeniero en Electrónica y Telecomunicaciones — UNACH; Laurea in Ingegneria Elettronica — Università della Calabria",
+      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; \n Máster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; \nIngeniero en Electrónica y Telecomunicaciones — UNACH; \n Laurea in Ingegneria Elettronica — Università della Calabria",
       "email": "carlospenafiel@unach.edu.ec",
       "orcid": "",
       "scholar": "",
