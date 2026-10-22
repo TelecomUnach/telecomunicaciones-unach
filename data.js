@@ -2101,7 +2101,7 @@ window.PORTFOLIO = {
           "Flexible antennas for biomedical IoT (2024–2026)."
         ]
       },
-      "photo": "assets/carlos-penafiel.png",
+      "photo": "carlos-penafiel.png",
       "metrics": {
         "citations": 154,
         "h": 7,
