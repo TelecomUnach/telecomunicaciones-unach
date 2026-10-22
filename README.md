@@ -47,18 +47,46 @@ py tools/importar_scholar.py carlos-penafiel "C:\ruta\citations.csv" --citas NUM
 
 Sustituya NUMERO y AAAA-MM-DD por valores realmente consultados. No son cifras de ejemplo. Después suba `data.js` actualizado a GitHub. No publique el archivo de respaldo. No hay sincronización automática ni extracción oculta de Scholar.
 
-## Alcance y datos pendientes
+## Listados de publicaciones de Google Scholar
 
-La entrega es una base inicial funcional: 17 perfiles de docentes, 6 enlaces Scholar identificados y 4 títulos seleccionados a partir de resultados públicos. No equivale a un censo de personal vigente ni a una bibliografía completa. Los perfiles sin información muestran explícitamente qué falta. La consulta directa de Scholar devolvió restricciones de acceso y errores 429: las citas, h e i10 permanecen pendientes en todos los perfiles. No se obtuvieron cifras actuales verificables ni se generaron cifras de demostración.
+Actualización del 22 de octubre de 2026. Se consultaron directamente en navegador los **11 perfiles enlazados en el Excel**, pulsando “Mostrar más” hasta que quedó deshabilitado. Se recuperaron **398 filas** y se agruparon las repeticiones exactas de título normalizado y año. Se conservan todos los enlaces de las entradas agrupadas en `scholarUrls`; las citas de versiones duplicadas no se suman.
 
-La biografía, asignaturas y proyecto iniciales de Carlos Peñafiel proceden del contexto proporcionado por el usuario; los demás no tienen biografías inventadas. Los campos de área iniciales son descriptores editoriales basados en intereses de los perfiles y deben validarse con sus titulares.
+Los títulos originales, autores visibles, año, medio y enlace de cada registro están en `data.js`. Se preservan los puntos suspensivos de los metadatos que Scholar presenta truncados. También se actualizaron las citas, h e i10 a partir de la tabla total visible de cada uno de los 11 perfiles, con fecha de consulta. Las cifras de los listados individuales no se usan para recalcular los índices del autor.
+
+Las listas de Scholar pueden contener artículos, congresos, libros, tesis y otros registros; la presencia en un perfil no verifica por sí sola el tipo documental ni la revisión por pares. Los registros sin clasificación editorial corroborada se identifican como “Registros de Scholar”. Cuando una obra ya tenía DOI verificado, se conservó. Se mantuvieron como complementos editoriales las obras documentadas que no estaban en el listado del perfil.
+
+Para los otros 10 docentes se buscaron perfiles públicos por nombre sin localizar un resultado verificable. Se mantienen sus obras verificadas y se agregan coautorías identificables en los listados consultados, sin inventar perfiles ni inferir que carecen de producción. Carmen Cobeña y Diego Ricaurte siguen sin bibliografía verificable incorporada. El listado de quienes no tienen enlace continúa siendo parcial.
+
+Los 21 perfiles contienen **433 asociaciones de títulos a docentes** tras la incorporación de coautorías y complementos. El número no es un total de obras únicas de la carrera: una publicación compartida aparece en cada ficha correspondiente. El archivo `REVISION_PERFILES.md` detalla la cobertura por docente y los perfiles pendientes.
+
+**ORCID confirmados por el usuario:** Luis Gonzalo Santillán: 0000-0002-4020-5110; José Luis Jínez: 0000-0002-4113-0579; Klever Torres: sin ORCID. Esta confirmación prevalece sobre las asociaciones contradictorias del Excel y de fuentes editoriales. No se modificó el Excel original.
+
+## Pure, Scopus y Elsevier Fingerprint Engine
+
+La estructura de referencia vigente es el perfil de Victor Herrera en el portal USFQ. **Este sitio es una implementación independiente para GitHub Pages; no es una instalación de Pure.** El pie enlaza los recursos solicitados sin afirmar que Elsevier desarrolla u opera esta página.
+
+- **Pure:** campo opcional `pure` para la URL institucional del investigador. Para sincronizar se requiere una instancia y acceso institucional autorizados, que no se proporcionaron en esta sesión.
+- **Scopus:** campo `scopus` para la URL del autor. Se enlazó el identificador de Luis Tello localizado en su ORCID. Las métricas de Scopus no se mezclan con las de Scholar. El acceso API depende de la habilitación institucional; una clave por sí sola no concede derechos de acceso.
+- **Elsevier Fingerprint Engine:** la huella actual es local, basada en términos de los títulos cargados. Puede mostrarse una exportación autorizada del motor mediante `fingerprint.provider`, `fingerprint.source`, `fingerprint.date` y `fingerprint.terms` (etiquetas `label`). No se ha conectado ni ejecutado el motor comercial.
+
+### Importar datos autorizados
+
+`tools/importar_exportacion.py` permite importar un JSON normalizado de un export institucional de Pure, Scopus, ORCID o Fingerprint. No llama a servicios externos ni acepta credenciales; no convierte una instalación estática en Pure.
+
+```powershell
+py tools/importar_exportacion.py ID_DOCENTE "C:\ruta\exportacion_normalizada.json"
+```
+
+El JSON debe contener `provider` (Pure, Scopus, ORCID o Elsevier Fingerprint Engine), `source` (URL HTTPS verificable) y `date` (AAAA-MM-DD). Puede incluir `publications` con títulos y metadatos, `scopus`/`pure` con URLs, y `fingerprint.terms` con etiquetas. Si incorpora `orcid`, debe coincidir con el del perfil. El archivo de exportación debe corresponder al docente seleccionado; revise la autoría antes de importar. Las exportaciones JSON nativas de cada proveedor necesitan normalizarse a esta estructura; el script no interpreta todos los esquemas propietarios.
+
+El importador conserva copia de seguridad. Las citas de otros proveedores se guardan por separado (`providerCitations` y `externalMetrics`) para no presentarlas como Scholar. Nunca guarde claves, tokens o contraseñas en los archivos que publica en GitHub.
 
 ## Marca y fuentes
 
 - Manual de identidad institucional, actualización septiembre 2026: páginas 8 (logotipo institucional), 12 (tipografía), 13 (azules institucionales), 25 (naranja Ingeniería) y 27 (aplicaciones de carrera). Los PNG se extrajeron directamente del manual conservando proporciones. No se redibujó ni tradujo la marca UNACH.
 - El manual presenta la denominación “Electrónica y Telecomunicaciones” en un ejemplo; aquí se emplea “Ingeniería en Telecomunicaciones” por el nombre solicitado y el directorio institucional.
 - Directorio: https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/
-- Referente estructural vigente: https://pure.ups.edu.ec/en/persons/german-vicente-arevalo-bermeo-3/ (cabecera de investigador, métricas, perfil personal, huella temática, producción por año, proyectos y colaboraciones). Se adapta su estructura a UNACH sin copiar datos del investigador de referencia ni utilizar sus cifras.
+- Referente estructural vigente: https://research.usfq.edu.ec/es/persons/victor-herrera/ (cabecera de investigador, métricas, perfil personal, huella temática, producción por año, proyectos y colaboraciones). Se adapta su estructura a UNACH sin copiar datos del investigador de referencia ni utilizar sus cifras.
 - La huella temática se genera mediante coincidencias de términos seleccionados en los títulos cargados. No utiliza Elsevier Fingerprint Engine, no infiere pesos bibliométricos y no representa toda la producción del docente. Los botones filtran publicaciones.
 - El gráfico anual se muestra solo si existen publicaciones con años conocidos; el contador indica registros cargados. Las colaboraciones no se inventan: pueden incorporarse como listas de texto en `collaborations.es` y `collaborations.en`. ORCID es opcional mediante `orcid`, con una URL verificada.
 - Scholar Carlos Peñafiel: https://scholar.google.com/citations?user=n3_SsRYAAAAJ
@@ -70,4 +98,12 @@ La biografía, asignaturas y proyecto iniciales de Carlos Peñafiel proceden del
 
 ## Verificación
 
-Sintaxis JavaScript y estructura de los datos revisadas. La revisión en navegador no pudo realizarse porque el entorno denegó la apertura de la vista previa. Compruebe el aspecto en su navegador de escritorio y móvil antes de publicar.
+Sintaxis JavaScript y estructura de los datos revisadas. Se comprobaron los 21 perfiles en ambos idiomas, búsqueda, filtro de 11 Scholar, coautorías, fuentes y rechazo de importaciones con un ORCID diferente. La revisión en navegador no pudo realizarse porque el entorno denegó la apertura de la vista previa. Compruebe el aspecto en su navegador de escritorio y móvil antes de publicar.
+
+## Navegación por pestañas
+
+Se añadieron ocho secciones bilingües: La carrera; Formación y objetivos; Campo profesional; Titulación; Malla curricular; Prácticas y vinculación; Docentes; Investigación. La página inicial abre La carrera. Las rutas `#seccion/...` se pueden copiar y compartir; el navegador permite regresar y avanzar entre ellas.
+
+Las síntesis académicas proceden de https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/ (consulta 22/10/2026). Los requisitos de titulación se presentan como información publicada; confirme procedimientos aplicables a cada cohorte con la Dirección. La traducción al inglés es informativa. Se enlaza directamente la malla a la que remite la fuente institucional: https://www.unach.edu.ec/wp-content/Facultades/Ingenier%C3%ADa/Mallas_academicas_2024/telecomunicaciones.jpg . Su imagen necesita conexión a Internet y puede abrirse en tamaño completo.
+
+El directorio conserva la nómina del Excel y las correcciones confirmadas; no se sustituyó por el directorio público, que puede incluir adscripciones de otros períodos. Las publicaciones, métricas, ORCID y fuentes de las fichas se preservan. La sección Investigación calcula títulos distintos cargados por su título normalizado; no representa un indicador bibliométrico oficial.
