@@ -1,58 +1,73 @@
-# Portal Académico y Científico — Ingeniería en Telecomunicaciones
+# UNACH | Portafolio académico de Telecomunicaciones
 
-Prototipo web estático inspirado en la organización de portales de perfiles académicos. **No es un sitio oficial de la UNACH**. Los registros de docentes, publicaciones y proyectos son ejemplos para pruebas; no deben presentarse como información institucional verificada.
+Sitio estático bilingüe ES/EN para GitHub Pages. No requiere Node, compilación ni claves. El logotipo UNACH tiene prioridad; Facultad y Carrera aparecen como unidades académicas subordinadas. Los azules #0E1424 y #333366 predominan. El naranja #E57326 de Ingeniería se utiliza como acento.
 
-## Archivos
+## Abrir en su equipo y guardar en D
 
-- `index.html`: estructura y secciones del portal.
-- `styles.css`: apariencia adaptable a móvil y escritorio.
-- `data.js`: datos editables de docentes, publicaciones y proyectos.
-- `script.js`: buscadores, filtros, fichas individuales y menú móvil.
+1. Extraiga el ZIP completo.
+2. Copie la carpeta extraída a `D:\PAGINA_WEB_TELECO`. También puede ejecutar el script `INSTALAR_EN_D.ps1` desde PowerShell; se detiene si esa carpeta ya existe para evitar sobrescribir trabajo.
+3. Abra `ABRIR_PAGINA.bat` o haga doble clic en `index.html`.
 
-## Probar localmente
+La carpeta D pertenece a su ordenador y no pudo crearse desde el entorno remoto donde se preparó este proyecto. Los archivos sí están listos para copiar allí. Montserrat y Lora se solicitan a Google Fonts; sin conexión se usan Arial y Georgia. El resto del sitio funciona localmente, incluidos búsqueda e idiomas.
 
-Abre `index.html` en Chrome, Firefox o Edge. No requiere instalar paquetes ni configurar una base de datos.
+## Publicar en GitHub Pages
 
-## Publicar gratis con GitHub Pages
+1. Cree o abra el repositorio destinado al portafolio.
+2. En la raíz del repositorio cargue `index.html`, `styles.css`, `app.js`, `data.js`, `.nojekyll` y la carpeta `assets`. Si usa “Upload files”, incluya los archivos que están dentro de assets manteniendo la carpeta. No cargue únicamente el ZIP.
+3. En **Settings → Pages → Build and deployment**, seleccione **Deploy from a branch**, rama `main`, carpeta `/(root)` y guarde.
+4. GitHub mostrará la dirección cuando termine el despliegue. Las próximas actualizaciones de los archivos se reflejarán en esa dirección.
 
-1. Crea una cuenta en https://github.com si no tienes una.
-2. En GitHub selecciona **New repository** y asigna un nombre, por ejemplo `telecomunicaciones-unach`. Elige **Public** (en GitHub Free, Pages para repositorios personales requiere un repositorio público).
-3. Selecciona **Add file → Upload files**, sube los cuatro archivos `index.html`, `styles.css`, `data.js` y `script.js` a la raíz del repositorio y confirma con **Commit changes**.
-4. Abre **Settings → Pages**. En **Build and deployment**, elige **Deploy from a branch**. Selecciona `main` y `/ (root)` y pulsa **Save**.
-5. Espera la publicación y abre la dirección que aparezca en Pages, normalmente `https://TU-USUARIO.github.io/telecomunicaciones-unach/`.
-6. Para que la dirección sea `https://TU-USUARIO.github.io/`, crea un repositorio llamado exactamente `TU-USUARIO.github.io` y sube los archivos a su raíz.
+Si ya tiene un repositorio, conserve una copia antes de reemplazar los archivos de su página anterior. Este proyecto no se conectó ni se publicó en ningún repositorio.
 
-**Importante:** `telecomunicaciones-unach.github.io` solo puede ser tu dominio si el nombre de tu cuenta u organización GitHub es `telecomunicaciones-unach` y está disponible. El nombre de repositorio por sí solo no determina el subdominio.
+## Actualizar docentes
 
-## Actualizar contenidos
+Los datos están en `data.js` (objeto `window.PORTFOLIO`). Cada docente tiene `id`, `name`, `email`, `scholar` (solo el ID del perfil), `photo`, `area`, `bio`, `teaching`, `projects`, `metrics` y `publications`.
 
-Edita `data.js`. Cada perfil contiene `id`, `name`, `role`, `area`, `initials`, `bio`, `interests`, `education`, `email`, `orcid`, `scholar` y `publications` (lista de IDs de publicaciones). Para crear un perfil nuevo, duplica un objeto y cambia todos los campos necesarios, manteniendo un `id` único. Haz lo mismo con `publications` y `projects`.
+- Los textos traducibles tienen propiedades `es` y `en`. Los títulos originales de publicaciones se conservan en su idioma para no alterar su identidad bibliográfica.
+- Para una foto, guárdela en `assets` y escriba por ejemplo `assets/carlos-penafiel.jpg` en `photo`. Actualmente se muestran iniciales: no se han inventado retratos.
+- Un número desconocido se escribe `null`, nunca 0. `metrics.date` requiere fecha de consulta `AAAA-MM-DD`; sin ella no se muestran métricas.
+- Para agregar un docente copie un objeto completo y use un `id` único. Para retirar un perfil elimine su objeto. Revise la adscripción vigente antes de publicar.
+- Puede añadir DOI, autores, año, revista, citas y enlace fuente por publicación. No traduzca el DOI ni los nombres propios.
 
-Si agregas una publicación real, registra título, autores, año, tipo, fuente y DOI verificados. El campo `doi` debe contener el identificador, no la URL completa. Los enlaces de ORCID y Scholar deben empezar con `https://`.
+## Importar publicaciones desde Google Scholar
 
-## Antes del lanzamiento institucional
+Desde el perfil del docente en Scholar, seleccione artículos → **Exportar → CSV**. Esta acción puede requerir que el titular entre a su cuenta. Revise que la exportación corresponde al docente correcto; el importador no determina autoría.
 
-- Solicitar autorización para uso del nombre, logotipo, identidad visual y datos institucionales.
-- Obtener consentimiento o confirmar la base jurídica correspondiente para publicar fotografías, biografías y datos de contacto de docentes.
-- Verificar los datos académicos y científicos.
-- Sustituir los textos y perfiles de demostración y retirar el aviso de prototipo solo cuando el sitio tenga aprobación institucional.
-- Definir responsables de actualización, revisión de contenido y accesibilidad.
+Con Python 3 instalado, abra una terminal en la carpeta y ejecute:
 
-## Límites de esta versión
+```powershell
+py tools/importar_scholar.py carlos-penafiel "C:\ruta\citations.csv"
+```
 
-Es un sitio estático, sin inicio de sesión, base de datos ni panel administrativo. Las actualizaciones se hacen editando `data.js` y subiendo cambios a GitHub. No incluye formularios que recolecten información personal.
+El comando reemplaza la selección inicial de ese docente por las filas del CSV y conserva una copia `data.js.bak`. El CSV estándar no incluye necesariamente métricas; estas se consultan en la tabla del perfil y pueden incorporarse juntas:
 
+```powershell
+py tools/importar_scholar.py carlos-penafiel "C:\ruta\citations.csv" --citas NUMERO --h NUMERO --i10 NUMERO --fecha AAAA-MM-DD
+```
 
-## Actualización de identidad y fuente institucional
-- `identidad-telecomunicaciones.png`: imagen proporcionada por el usuario; no modificar ni sustituir sin autorización.
-- Se añadieron datos generales, misión, visión y perfil de egreso sintetizados de https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/ (consultado el 15-10-2026).
-- La lista de docentes, publicaciones y proyectos continúa siendo demostrativa: editar `data.js` antes de publicación oficial.
-- Para GitHub Pages, subir el **contenido** de esta carpeta a la raíz del repositorio (no la carpeta contenedora).
+Sustituya NUMERO y AAAA-MM-DD por valores realmente consultados. No son cifras de ejemplo. Después suba `data.js` actualizado a GitHub. No publique el archivo de respaldo. No hay sincronización automática ni extracción oculta de Scholar.
 
+## Alcance y datos pendientes
 
-## Versión V4 — perfiles de docentes
-Se incorporaron 20 perfiles con formación y correo institucional desde hojas de vida facilitadas por el usuario. No se publicaron cédulas, direcciones, fechas de nacimiento, teléfonos ni correos personales. Las publicaciones y enlaces ORCID/Scholar quedan vacíos hasta verificar atribución. Para publicar, sustituir los archivos de la raíz del repositorio de GitHub.
+La entrega es una base inicial funcional: 17 perfiles de docentes, 6 enlaces Scholar identificados y 4 títulos seleccionados a partir de resultados públicos. No equivale a un censo de personal vigente ni a una bibliografía completa. Los perfiles sin información muestran explícitamente qué falta. La consulta directa de Scholar devolvió restricciones de acceso y errores 429: las citas, h e i10 permanecen pendientes en todos los perfiles. No se obtuvieron cifras actuales verificables ni se generaron cifras de demostración.
 
+La biografía, asignaturas y proyecto iniciales de Carlos Peñafiel proceden del contexto proporcionado por el usuario; los demás no tienen biografías inventadas. Los campos de área iniciales son descriptores editoriales basados en intereses de los perfiles y deben validarse con sus titulares.
 
-## Versión 5 — Perfil de Carlos Ramiro Peñafiel-Ojeda
-Se añadió su fotografía en `assets/carlos-penafiel.jpg`, biografía en inglés proporcionada por la Dirección de Carrera, formación académica, intereses de investigación y enlaces ORCID y Google Scholar. Para actualizar GitHub Pages, sube todos los archivos y la carpeta `assets` conservando la estructura. La biografía es texto proporcionado por el usuario, sin verificación externa adicional.
+## Marca y fuentes
+
+- Manual de identidad institucional, actualización septiembre 2026: páginas 8 (logotipo institucional), 12 (tipografía), 13 (azules institucionales), 25 (naranja Ingeniería) y 27 (aplicaciones de carrera). Los PNG se extrajeron directamente del manual conservando proporciones. No se redibujó ni tradujo la marca UNACH.
+- El manual presenta la denominación “Electrónica y Telecomunicaciones” en un ejemplo; aquí se emplea “Ingeniería en Telecomunicaciones” por el nombre solicitado y el directorio institucional.
+- Directorio: https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/
+- Referente estructural vigente: https://pure.ups.edu.ec/en/persons/german-vicente-arevalo-bermeo-3/ (cabecera de investigador, métricas, perfil personal, huella temática, producción por año, proyectos y colaboraciones). Se adapta su estructura a UNACH sin copiar datos del investigador de referencia ni utilizar sus cifras.
+- La huella temática se genera mediante coincidencias de términos seleccionados en los títulos cargados. No utiliza Elsevier Fingerprint Engine, no infiere pesos bibliométricos y no representa toda la producción del docente. Los botones filtran publicaciones.
+- El gráfico anual se muestra solo si existen publicaciones con años conocidos; el contador indica registros cargados. Las colaboraciones no se inventan: pueden incorporarse como listas de texto en `collaborations.es` y `collaborations.en`. ORCID es opcional mediante `orcid`, con una URL verificada.
+- Scholar Carlos Peñafiel: https://scholar.google.com/citations?user=n3_SsRYAAAAJ
+- Scholar Luis Tello: https://scholar.google.com/citations?user=Kwx5-b8AAAAJ
+- Scholar Daniel Haro: https://scholar.google.com/citations?user=qYCdO_MAAAAJ
+- Scholar Ciro Radicelli: https://scholar.google.com/citations?user=hs5uiJ8AAAAJ
+- Scholar Pedro Escudero: https://scholar.google.com/citations?user=s21t0BsAAAAJ
+- Scholar Luis Santillán: https://scholar.google.com/citations?user=uRKQJX8AAAAJ
+
+## Verificación
+
+Sintaxis JavaScript y estructura de los datos revisadas. La revisión en navegador no pudo realizarse porque el entorno denegó la apertura de la vista previa. Compruebe el aspecto en su navegador de escritorio y móvil antes de publicar.

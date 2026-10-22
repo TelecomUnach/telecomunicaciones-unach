@@ -1,304 +1,570 @@
-/* Perfiles: datos académicos extraídos de 20 hojas de vida UNACH aportadas por la Dirección de Carrera.
- No incluye datos personales sensibles. Enlaces de producción científica pendientes de verificación. */
-window.PORTAL_DATA = {
+window.PORTFOLIO = {
+  "updated": "2026-10-21",
+  "directorySource": "https://www.unach.edu.ec/ingenieria-en-telecomunicaciones/",
   "people": [
     {
-      "id": "docente-01",
-      "name": "Marlon Danilo Basantes Valverde",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Física",
-      "initials": "MD",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctor de Investigación en Física y Tecnologías Cuánticas — Università della Calabria; Magíster en Administración Ambiental — UNACH; Doctor en Física — ESPOCH",
-      "email": "mbasantes@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-02",
-      "name": "Juan Carlos Cepeda Pacheco",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Ingeniería telemática",
-      "initials": "JC",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Ingeniería Telemática — Universitat Politècnica de Catalunya; Magíster en Interconectividad de Redes — ESPOCH; Ingeniero en Electrónica y Computación — ESPOCH",
-      "email": "jcepeda@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-03",
-      "name": "Yesenia Elizabeth Cevallos Villacrés",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Sistemas complejos",
-      "initials": "YE",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctor de Investigación en Ciencias y Tecnologías de los Sistemas Complejos — Università della Calabria; Magíster en Tecnología de la Información y Multimedia Educativa — Universidad Técnica de Ambato; Ingeniera en Electrónica y Telecomunicaciones — Escuela Politécnica Nacional",
-      "email": "ycevallos@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-04",
-      "name": "Edgar Giovanny Cuzco Silva",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Telecomunicaciones",
-      "initials": "EG",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Sistemas de Telecomunicaciones — ESPOCH; Magíster en Formulación, Evaluación y Gestión de Proyectos Sociales y Productivos — UNACH; Ingeniero en Electrónica y Control — Escuela Politécnica Nacional",
-      "email": "gcuzco@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-05",
-      "name": "Eduardo Daniel Haro Mendoza",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Ciencias informáticas",
-      "initials": "ED",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctor en Ciencias Informáticas — Universidad Nacional de La Plata; Magíster en Interconectividad de Redes — ESPOCH; Diploma Superior en Proyectos y Transferencia de Tecnologías — ESPOCH; Ingeniero en Electrónica y Computación — ESPOCH",
-      "email": "dharo@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-06",
-      "name": "Deysi Vilma Inca Balseca",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Redes de comunicaciones",
-      "initials": "DV",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Redes de Comunicaciones — Pontificia Universidad Católica del Ecuador; Ingeniera en Electrónica y Computación — ESPOCH",
-      "email": "dinca@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-07",
-      "name": "Manuel Antonio Meneses Freire",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Estadística y matemáticas",
-      "initials": "MA",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Estadística e Investigación Operativa — Universidade da Coruña; Máster Universitario en Técnicas Estadísticas — Universidade da Coruña; Magíster en Gestión Ambiental — UNACH; Doctor en Matemática — ESPOCH",
-      "email": "ameneses@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-08",
+      "id": "carlos-penafiel",
       "name": "Carlos Ramiro Peñafiel-Ojeda",
-      "role": "Director de Carrera · Ingeniería en Telecomunicaciones",
-      "area": "Radiocomunicaciones",
-      "initials": "CR",
-      "bio": "Carlos Ramiro Peñafiel-Ojeda is a Full Associate Professor (Microwaves, Antennas and Propagation) at the Universidad Nacional de Chimborazo. He received a bachelor's Degree in Electronics and Telecommunications engineering from the Universidad Nacional de Chimborazo. He received a bachelor's degree in Electronic Engineering in 2011 and a Master's Degree in Telecommunication Engineering at the University of Calabria in 2014, with the scholarship offered by the same University. In addition, he received his Ph.D. in Telecommunications Engineering at the Universitat Politècnica de Valencia in 2021 (cum laude and international mention) with a Universidad Nacional de Chimborazo scholarship to postgrad studies.\n\nHis research experience began in 2013, when he participated in the “Messageri della Conoscenza” Project, on the subject of sensor networks to control drones, managing to win a research scholarship at the Université de Technologie de Compiègne, Compiegne, France. In 2016, he collaborated with the Netllar Spanish company, developing microwave networks for beamforming. In 2017, he collaborated with the company Huawei (Finland) to design MIMO antennas that can be integrated into mobile devices. In 2018, he participated as a researcher in the Antennas and Electromagnetic Group of Queen Mary University of London in the design of metasurfaces. In addition, he has worked on several national and international research projects.\n\nIn 2014, he was a full professor at UPS-Quito (Universidad Politécnica Salesiana), and in 2015, he joined UNACH (Universidad Nacional de Chimborazo) as a full professor. He was head of the Telecommunication Engineering School at UNACH in 2015 and has held the same position since February. He also teaches in several master's programs. Currently, he is an IEEE chapter chair on the Antennas and Propagation Society in the Ecuador Section. His research interests include wearable antennas, metasurfaces, devices for satellite communications, MIMO antennas, antennas for IoT applications, and 5G and 6G technology.",
-      "interests": [
-        "Wearable antennas",
-        "Metasurfaces",
-        "Satellite communications",
-        "MIMO antennas",
-        "IoT",
-        "5G / 6G"
-      ],
-      "education": "Doctorado en Telecomunicación (Cum Laude) Universitat Politècnica de València\n\nMáster Universitario en Ingeniería de Telecomunicaciones en la Università della Calabria\n\nIngeniero en Electrónica y Telecomunicaciones en la UNACH\n\nLaurea in Ingegneria Elettronica por la Università della Calabria",
       "email": "carlospenafiel@unach.edu.ec",
-      "orcid": "https://orcid.org/0000-0003-0362-3628",
-      "scholar": "https://scholar.google.com/citations?user=n3_SsRYAAAAJ&hl=es&oi=ao",
-      "publications": [],
-      "photo": "assets/carlos-penafiel.jpg"
+      "scholar": "n3_SsRYAAAAJ",
+      "area": {
+        "es": "Antenas y electromagnetismo",
+        "en": "Antennas and electromagnetics"
+      },
+      "bio": {
+        "es": "Doctor en Ingeniería de Telecomunicaciones por la Universitat Politècnica de València (2021), con mención internacional y cum laude. Máster en Ingeniería de Telecomunicación por la Universidad de Calabria (2014). Su trabajo aborda antenas, microondas y propagación, con interés en antenas textiles flexibles para aplicaciones IoT.",
+        "en": "PhD in Telecommunications Engineering from Universitat Politècnica de València (2021), with international mention and cum laude distinction. Master’s degree in Telecommunications Engineering from the University of Calabria (2014). His work focuses on antennas, microwaves and propagation, including flexible textile antennas for IoT applications."
+      },
+      "teaching": {
+        "es": [
+          "Sistemas de Microondas",
+          "Propagación y Antenas"
+        ],
+        "en": [
+          "Microwave Systems",
+          "Propagation and Antennas"
+        ]
+      },
+      "projects": {
+        "es": [
+          "Antenas flexibles para IoT biomédico (2024–2026)."
+        ],
+        "en": [
+          "Flexible antennas for biomedical IoT (2024–2026)."
+        ]
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": [
+        {
+          "title": "Frequency reconfigurable patch antenna using pin diodes with directive and fixed radiation pattern",
+          "year": null,
+          "authors": "",
+          "venue": "",
+          "doi": "",
+          "citations": null,
+          "source": "https://scholar.google.com/citations?user=n3_SsRYAAAAJ",
+          "note": "indexed-selection"
+        }
+      ]
     },
     {
-      "id": "docente-09",
-      "name": "Alejandra del Pilar Pozo Jara",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Interconectividad de redes",
-      "initials": "AD",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Interconectividad de Redes — ESPOCH; Ingeniero en Sistemas — ESPOCH",
-      "email": "apozo@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-10",
-      "name": "Ciro Diego Radicelli García",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Telecomunicaciones",
-      "initials": "CD",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; Máster Universitario en Tecnologías, Sistemas y Redes de Comunicaciones — Universitat Politècnica de València; Magíster en Interconectividad de Redes — ESPOCH; Ingeniero en Sistemas Informáticos — ESPOCH",
-      "email": "cradicelli@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-11",
-      "name": "Daniel Antonio Santillán Haro",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Telecomunicaciones",
-      "initials": "DA",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; Máster Universitario en Tecnologías, Sistemas y Redes de Comunicaciones — Universitat Politècnica de València; Ingeniero en Electrónica y Telecomunicaciones — UNACH",
-      "email": "dsantillan@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-12",
-      "name": "Luis Patricio Tello Oquendo",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Ingeniería telemática",
-      "initials": "LP",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Telecomunicación — Universitat Politècnica de València; Máster Universitario en Tecnologías, Sistemas y Redes de Comunicaciones (Ingeniería Telemática) — Universitat Politècnica de València; Ingeniero en Electrónica y Computación — ESPOCH",
+      "id": "luis-tello",
+      "name": "Luis Patricio Tello-Oquendo",
       "email": "luis.tello@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
+      "scholar": "Kwx5-b8AAAAJ",
+      "area": {
+        "es": "Redes y comunicaciones",
+        "en": "Networks and communications"
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": [
+        {
+          "title": "A comprehensive study of the IoT cybersecurity in smart cities",
+          "year": null,
+          "authors": "",
+          "venue": "",
+          "doi": "",
+          "citations": null,
+          "source": "https://scholar.google.com/citations?user=Kwx5-b8AAAAJ",
+          "note": "indexed-selection"
+        }
+      ]
     },
     {
-      "id": "docente-13",
-      "name": "Klever Hernán Torres Rodríguez",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Matemáticas",
-      "initials": "KH",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Educación Matemática — UNACH; Doctor en Matemática — ESPOCH",
-      "email": "ktorres@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
+      "id": "daniel-haro",
+      "name": "Daniel Eduardo Haro-Mendoza",
+      "email": "dharo@unach.edu.ec",
+      "scholar": "qYCdO_MAAAAJ",
+      "area": {
+        "es": "Redes y comunicaciones",
+        "en": "Networks and communications"
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": [
+        {
+          "title": "Modeling the resource allocation in 5G radio access networks with network slicing",
+          "year": null,
+          "authors": "",
+          "venue": "",
+          "doi": "",
+          "citations": null,
+          "source": "https://scholar.google.com/citations?user=qYCdO_MAAAAJ",
+          "note": "indexed-selection"
+        }
+      ]
     },
     {
-      "id": "docente-14",
-      "name": "Carmen Magali Cobeña Ordoñez",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Gestión académica",
-      "initials": "CM",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Gestión Académica Universitaria — UNACH; Diplomado Superior en Docencia Universitaria — UNACH; Abogado de los Tribunales de Justicia — Universidad Católica de Cuenca; Licenciada en Ciencias Públicas y Sociales — Universidad Central del Ecuador",
-      "email": "mcobena@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
+      "id": "ciro-radicelli",
+      "name": "Ciro Diego Radicelli-García",
+      "email": "cradicelli@unach.edu.ec",
+      "scholar": "hs5uiJ8AAAAJ",
+      "area": {
+        "es": "Televisión digital y TIC",
+        "en": "Digital television and ICT"
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": [
+        {
+          "title": "Sistemas de información geográfica y su aplicación en las ciencias sociales: Una revisión bibliográfica",
+          "year": null,
+          "authors": "",
+          "venue": "",
+          "doi": "",
+          "citations": null,
+          "source": "https://scholar.google.com/citations?user=hs5uiJ8AAAAJ",
+          "note": "indexed-selection"
+        }
+      ]
     },
     {
-      "id": "docente-15",
-      "name": "Anita Cecilia Ríos Rivera",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Ciencias ambientales",
-      "initials": "AC",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctora en Ciencias Ambientales — Universidad Nacional Mayor de San Marcos; Magíster en Gestión Ambiental — UNACH; Doctora en Química, especialidad Orgánico Bioquímico — ESPOCH",
-      "email": "arios@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-16",
-      "name": "Pedro Fernando Escudero Villa",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Ingeniería biomédica",
-      "initials": "PF",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctorado en Ingeniería Electrónica y de Telecomunicación — Universitat Autònoma de Barcelona; Máster Universitario en Ingeniería Biomédica — Universidad Politécnica de Madrid; Máster Universitario en Ingeniería Eléctrica, Electrónica y Automática — Universidad Carlos III de Madrid; Ingeniero en Electrónica y Computación — ESPOCH",
+      "id": "pedro-escudero",
+      "name": "Pedro Fernando Escudero-Villa",
       "email": "pedro.escudero@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
+      "scholar": "s21t0BsAAAAJ",
+      "area": {
+        "es": "Electrónica",
+        "en": "Electronics"
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
       "publications": []
     },
     {
-      "id": "docente-17",
-      "name": "José Luis Jínez Tapia",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Telecomunicaciones",
-      "initials": "JL",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Máster Universitario en Ingeniería de Telecomunicaciones — Università della Calabria; Ingeniero en Electrónica y Telecomunicaciones — UNACH",
-      "email": "jjinez@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-18",
-      "name": "Leonardo Fabián Rentería Bustamante",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Sistemas complejos",
-      "initials": "LF",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Doctor de Investigación en Ciencias y Tecnologías de los Sistemas Complejos — Università della Calabria; Ingeniero en Electrónica y Telecomunicaciones — Universidad Técnica Particular de Loja",
-      "email": "leonardo.renteria@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
-      "publications": []
-    },
-    {
-      "id": "docente-19",
-      "name": "Luis Gonzalo Santillán Valdiviezo",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Redes de comunicaciones",
-      "initials": "LG",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Redes de Comunicaciones — Pontificia Universidad Católica del Ecuador; Ingeniero en Electrónica y Computación — ESPOCH",
+      "id": "luis-santillan",
+      "name": "Luis Gonzalo Santillán-Valdiviezo",
       "email": "lsantillan@unach.edu.ec",
-      "orcid": "",
-      "scholar": "",
+      "scholar": "uRKQJX8AAAAJ",
+      "area": {
+        "es": "Electrónica",
+        "en": "Electronics"
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
       "publications": []
     },
     {
-      "id": "docente-20",
-      "name": "Diana Carolina Villagómez Vacacela",
-      "role": "Docente · Carrera de Ingeniería en Telecomunicaciones",
-      "area": "Psicología y educación",
-      "initials": "DC",
-      "bio": "Formación académica registrada en la hoja de vida institucional de la UNACH. Producción científica, líneas de investigación y enlaces académicos pendientes de validación.",
-      "interests": [],
-      "education": "Magíster en Desarrollo Temprano y Educación Infantil — Universidad Casa Grande; Psicóloga Clínica — UNACH",
-      "email": "carolina.villagomez@unach.edu.ec",
-      "orcid": "",
+      "id": "marlon-basantes",
+      "name": "Marlon Danilo Basantes Valverde",
+      "email": "mbasantes@unach.edu.ec",
       "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
       "publications": []
-    }
-  ],
-  "publications": [],
-  "projects": [
+    },
     {
-      "id": "proy-01",
-      "title": "Antenna Smart Campus",
-      "type": "Innovación",
-      "status": "Propuesta",
-      "description": "Proyecto propuesto para investigación en antenas y redes inalámbricas en el campus universitario."
+      "id": "yesenia-cevallos",
+      "name": "Yesenia Elizabeth Cevallos Villacrés",
+      "email": "ycevallos@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "carmen-cobena",
+      "name": "Carmen Magali Cobeña Ordóñez",
+      "email": "mcobena@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "giovanny-cuzco",
+      "name": "Edgar Giovanny Cuzco Silva",
+      "email": "gcuzco@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "juan-cepeda",
+      "name": "Juan Carlos Cepeda Pacheco",
+      "email": "jcepeda@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "deysi-inca",
+      "name": "Deysi Vilma Inca Balseca",
+      "email": "dinca@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "carolina-villagomez",
+      "name": "Diana Carolina Villagómez Vacacela",
+      "email": "carolina.villagomez@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "jose-jinez",
+      "name": "José Luis Jínez Tapia",
+      "email": "jjinez@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "manuel-meneses",
+      "name": "Manuel Antonio Meneses Freire",
+      "email": "ameneses@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "alejandra-pozo",
+      "name": "Alejandra del Pilar Pozo Jara",
+      "email": "apozo@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
+    },
+    {
+      "id": "daniel-santillan",
+      "name": "Daniel Antonio Santillán Haro",
+      "email": "dsantillan@unach.edu.ec",
+      "scholar": "",
+      "area": {
+        "es": "",
+        "en": ""
+      },
+      "bio": {
+        "es": "",
+        "en": ""
+      },
+      "teaching": {
+        "es": [],
+        "en": []
+      },
+      "projects": {
+        "es": [],
+        "en": []
+      },
+      "photo": "",
+      "metrics": {
+        "citations": null,
+        "h": null,
+        "i10": null,
+        "date": null
+      },
+      "publications": []
     }
   ]
 };
